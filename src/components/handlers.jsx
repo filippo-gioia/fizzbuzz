@@ -10,4 +10,3 @@ const handleFizz = (number) => {
 };
 
 export default handleFizz;
-
