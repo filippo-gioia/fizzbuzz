@@ -3,6 +3,7 @@ import handleFizz from "./handlers/handlefizz";
 import handleBuzz from "./handlers/handlebuzz";
 import handleFizzbuzz from "./handlers/handlefizzbuzz";
 import handlePass from "./handlers/handlepass";
+import CountdownTimer from "./countdownTimer";
 
 class Fizzbuzz extends Component {
   state = {
@@ -17,6 +18,7 @@ class Fizzbuzz extends Component {
     this.setState({
       number: Math.floor((Math.random() * 100 + 1) * this.state.debugElement),
     });
+    // setTimeout(() => this.handleRefresh(), 3000);
   };
 
   buttonHandleFizzbuzz = () => {
@@ -68,11 +70,22 @@ class Fizzbuzz extends Component {
       this.setState((state) => {
         return { count: state.count + 1 };
       });
+    this.handleRefresh();
   };
+
+  // handleTimer = () => {
+  //   const THREE_SECONDS_IN_MS = 3000;
+  //   const NOW_IN_MS = new Date().getTime();
+  //   const dateTimeAfterThreeSeconds = NOW_IN_MS + THREE_SECONDS_IN_MS;
+  //   return dateTimeAfterThreeSeconds;
+  // };
 
   render() {
     return (
       <React.Fragment>
+        {/* <div>
+          <CountdownTimer targetdate={this.handleTimer} />
+        </div> */}
         <span style={{ fontSize: 15 }} className="badge bg-danger m-3">
           {this.state.count}
         </span>
@@ -94,7 +107,8 @@ class Fizzbuzz extends Component {
         </button>
         <button
           onClick={this.buttonHandleBuzz}
-          className="btn btn btn-secondary m-3">
+          className="btn btn btn-secondary m-3"
+        >
           Buzz
         </button>
         <button
@@ -105,7 +119,8 @@ class Fizzbuzz extends Component {
         </button>
         <button
           onClick={this.buttonHandlePass}
-          className="btn btn btn-secondary m-3">
+          className="btn btn btn-secondary m-3"
+        >
           Pass
         </button>
         <br />
