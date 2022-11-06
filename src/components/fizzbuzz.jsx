@@ -30,25 +30,6 @@ class Fizzbuzz extends Component {
     );
   };
 
-
-  // handleFizzbuzz = () => {
-  //   if (this.state.number % 3 === 0 && this.state.number % 5 === 0)
-  //     this.setState({ message: "Correct" });
-  //   if (this.state.number % 3 !== 0 && this.state.number % 5 !== 0)
-  //     this.setState({ message: "Incorrect" });
-  //   if (this.state.number % 3 === 0 && this.state.number % 5 !== 0)
-  //     this.setState({ message: "Incorrect" });
-  //   if (this.state.number % 5 === 0 && this.state.number % 3 !== 0)
-  //     this.setState({ message: "Incorrect" });
-  // };
-
-  // handleFizz = () => {
-  //   if (this.state.number % 3 === 0) this.setState({ message: "Correct" });
-  //   if (this.state.number % 3 === 0 && this.state.number % 5 === 0)
-  //     this.setState({ message: "This is also divisible by 5!" });
-  //   if (this.state.number % 3 !== 0) this.setState({ message: "Incorrect" });
-  // };
-
   buttonHandleFizz = () => {
     this.setState(
       (previousState) => ({
@@ -71,13 +52,6 @@ class Fizzbuzz extends Component {
     );
   };
 
-  // handleBuzz = () => {
-  //   if (this.state.number % 5 === 0) this.setState({ message: "Correct" });
-  //   if (this.state.number % 3 === 0 && this.state.number % 5 === 0)
-  //     this.setState({ message: "This is also divisible by 3!" });
-  //   if (this.state.number % 5 !== 0) this.setState({ message: "Incorrect" });
-  // };
-
   buttonHandlePass = () => {
     this.setState(
       (previousState) => ({
@@ -88,18 +62,6 @@ class Fizzbuzz extends Component {
       }
     );
   };
-
-
-  // handlePass = () => {
-  //   if (this.state.number % 3 !== 0 && this.state.number % 5 !== 0)
-  //     this.setState({ message: "Correct" });
-  //   if (this.state.number % 3 === 0 && this.state.number % 5 === 0)
-  //     this.setState({ message: "Incorrect" });
-  //   if (this.state.number % 3 === 0 && this.state.number % 5 !== 0)
-  //     this.setState({ message: "Incorrect" });
-  //   if (this.state.number % 3 !== 0 && this.state.number % 5 === 0)
-  //     this.setState({ message: "Incorrect" });
-  // };
 
   updateCounter = () => {
     if (this.state.message === "Correct")
